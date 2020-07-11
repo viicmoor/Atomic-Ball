@@ -6,6 +6,8 @@ using UnityEngine.Events;
 public class Ball : MonoBehaviour
 {
     [SerializeField] GameObject ballMesh;
+    [SerializeField] AudioSource source;
+    [SerializeField] AudioClip ballHit;
     public float speed = 0.01f;
     float count;
     [SerializeField] float angle;
@@ -59,6 +61,14 @@ public class Ball : MonoBehaviour
         {
             GameObject.Find("GameController").GetComponent<GameController>().GoalReached();
             locked = true;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))        
+        {
+            if(!source.isPlaying) source.PlayOneShot(ballHit);
         }
     }
 }

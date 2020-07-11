@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 677, y: 492}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 110
+  controlID: 112
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -221,10 +221,10 @@ MonoBehaviour:
     y: 0
     width: 1588
     height: 947
-  m_MinSize: {x: 403, y: 492}
+  m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 111
+  controlID: 113
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -246,10 +246,10 @@ MonoBehaviour:
     y: 0
     width: 1588
     height: 672
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 402, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 112
+  controlID: 114
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -9568
+  m_LastSelectedObjectID: 13282
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -633,20 +633,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Script
+    - Assets/Audio
   m_ViewMode: 1
   m_StartGridSize: 60
   m_LastFolders:
-  - Assets/Script
+  - Assets/Audio
   m_LastFoldersGridSize: 60
   m_LastProjectPath: D:\GitHub Proyects\Atomic-Ball\AtomicBall
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: fe340000
-    m_LastClickedID: 13566
-    m_ExpandedIDs: 00000000e834000000ca9a3b
+    m_SelectedIDs: 0a350000
+    m_LastClickedID: 13578
+    m_ExpandedIDs: 00000000fa34000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -674,7 +674,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e8340000
+    m_ExpandedIDs: 00000000fa340000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -762,12 +762,12 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewResizer:
-    m_CachedPref: 370
+    m_CachedPref: 288
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 25
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -797,9 +797,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 14300000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 36f1ffff04f6ffff42f9ffff6afbffffc8330000e0330000ea35000074370000
+      m_SelectedIDs: e2330000
+      m_LastClickedID: 13282
+      m_ExpandedIDs: 12fbffff20fbffff6afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -859,9 +859,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.16601077, y: 0.78791356, z: 0.6508484}
+    m_Target: {x: -2.4258285, y: -0.62077713, z: 6.261241}
     speed: 2
-    m_Value: {x: -0.16601077, y: 0.78791356, z: 0.6508484}
+    m_Value: {x: -2.4258285, y: -0.62077713, z: 6.261241}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -907,13 +907,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.08271491, y: -0.0044903024, z: 0.00036309115, w: 0.99658024}
+    m_Target: {x: 0.48393056, y: -0.13417625, z: 0.07536581, w: 0.86149013}
     speed: 2
-    m_Value: {x: 0.0827135, y: -0.004490226, z: 0.00036308495, w: 0.99656326}
+    m_Value: {x: 0.48392156, y: -0.13417377, z: 0.07536441, w: 0.8614741}
   m_Size:
-    m_Target: 7.47523
+    m_Target: 8.912869
     speed: 2
-    m_Value: 7.47523
+    m_Value: 8.912869
   m_Ortho:
     m_Target: 0
     speed: 2
