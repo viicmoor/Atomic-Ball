@@ -28,17 +28,14 @@ public class Ball : MonoBehaviour
         {
             transform.Rotate(0, rotationAngle, 0);
 
-            Vector3 pos = transform.position;
+            Vector3 pos = transform.position;        
             pos.z += transform.forward.z * speed;
             pos.x += transform.forward.x * speed;
             transform.position = pos;
             ballMesh.transform.Rotate(0, 0, speed);
             
 
-            if (count < time)
-            {
-                count += Time.deltaTime;
-            }
+            if (count < time) count += Time.deltaTime;           
             else
             {
                 count = 0;

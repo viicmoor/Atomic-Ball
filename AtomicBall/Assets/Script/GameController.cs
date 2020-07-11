@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject goal;
     [SerializeField] GameObject goalGreen;
     [SerializeField] GameObject ball;
+    [SerializeField] GameObject cube;
     [SerializeField] float minX;
     [SerializeField] float maxX;
     [SerializeField] float minY;
@@ -34,10 +35,14 @@ public class GameController : MonoBehaviour
         goalReached = false;
         counter = 0;
         roundText.SetText(roundcounter.ToString());
+
+        if (cube.activeSelf) cube.SetActive(false);
+        if(goalGreen.activeSelf) goalGreen.SetActive(false);
     }
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space)) GoalReached();
         if (goalReached)
         {
             if (counter < 1.0f) counter += Time.deltaTime;
@@ -58,23 +63,33 @@ public class GameController : MonoBehaviour
         Vector3 point = transform.position;
         point.x = UnityEngine.Random.Range(minX, maxX);
         point.z = UnityEngine.Random.Range(minY, maxY);
-        point.y = 1;
+        point.y = 0.5f;
         ball.transform.position = point;
 
         point.x = UnityEngine.Random.Range(minX, maxX);
         point.z = UnityEngine.Random.Range(minY, maxY);
         point.y = 0.2f;
         goal.transform.position = point;
+
+        point.x = UnityEngine.Random.Range(minX, maxX);
+        point.z = UnityEngine.Random.Range(minY, maxY);
+        point.y = 1.0f;
+        cube.transform.position = point;
+
         roundcounter++;
         roundText.SetText(roundcounter.ToString());
-        if (roundcounter % 3 == 0)
-        {            
-            ball.GetComponent<Ball>().NextRound(0,0,0);
-        }
-        else
+
+        if (roundcounter % 3 != 0) ball.GetComponent<Ball>().NextRound(0,0,0);
+        else ball.GetComponent<Ball>().NextRound(speedIncrease,0.05f,0.2f);
+        
+
+        if (roundcounter > 6) cube.SetActive(true);
+        if (cube.activeSelf)
         {
-            ball.GetComponent<Ball>().NextRound(speedIncrease,0.05f,0.2f);
+            if (roundcounter == 12) cube.GetComponent<Cube>().ActivateMovement();
+            cube.GetComponent<Cube>().NextRound();
         }
+
         goal.SetActive(true);
         goalGreen.SetActive(false);
         counter = 0;
