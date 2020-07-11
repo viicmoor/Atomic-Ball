@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
     [SerializeField] float maxX;
     [SerializeField] float minY;
     [SerializeField] float maxY;
-
+    [SerializeField] TextMeshProUGUI roundText;
     [SerializeField] float speedIncrease;
     int roundcounter;
     bool goalReached;
@@ -33,6 +33,7 @@ public class GameController : MonoBehaviour
         roundcounter = 0;
         goalReached = false;
         counter = 0;
+        roundText.SetText(roundcounter.ToString());
     }
 
     private void Update()
@@ -64,16 +65,15 @@ public class GameController : MonoBehaviour
         point.z = UnityEngine.Random.Range(minY, maxY);
         point.y = 0.2f;
         goal.transform.position = point;
-
-        if (roundcounter < 3)
-        { 
-            roundcounter++;
-            ball.GetComponent<Ball>().NextRound(0);
+        roundcounter++;
+        roundText.SetText(roundcounter.ToString());
+        if (roundcounter % 3 == 0)
+        {            
+            ball.GetComponent<Ball>().NextRound(0,0,0);
         }
         else
         {
-            roundcounter = 0;
-            ball.GetComponent<Ball>().NextRound(speedIncrease);
+            ball.GetComponent<Ball>().NextRound(speedIncrease,0.05f,0.2f);
         }
         goal.SetActive(true);
         goalGreen.SetActive(false);
