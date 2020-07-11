@@ -2,13 +2,18 @@
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
     [SerializeField] GameObject PauseMenu;  
     void Start()
     {
-        
+        if (PauseMenu.activeSelf)
+        {
+            PauseMenu.SetActive(false);
+            Time.timeScale = 1;
+        }
     }
 
     // Update is called once per frame
@@ -33,5 +38,10 @@ public class Pause : MonoBehaviour
     {
         PauseMenu.SetActive(false);
         Time.timeScale = 1;
+    }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
